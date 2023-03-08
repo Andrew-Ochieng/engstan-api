@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     end
 
     def plain_products
-        products = Product.where(product_type: 'plain') 
+        products = Product.where(product_type: 'Plain') 
         if products
             render json: products, status: :ok
         else
@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
     end
     
     def branded_products
-        products = Product.where(product_type: 'branded') 
+        products = Product.where(product_type: 'Branded') 
         if products
             render json: products, status: :ok
         else
