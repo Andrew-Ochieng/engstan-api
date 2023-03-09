@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :products, only: [:index, :create, :destroy]
+  resources :products, only: [:index, :show, :create, :destroy]
   get '/users', to: 'users#create'
   get '/users', to: 'users#index'
   get '/plain_products', to: 'products#plain_products'

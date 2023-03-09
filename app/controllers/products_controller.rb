@@ -4,6 +4,16 @@ class ProductsController < ApplicationController
         render json: products, status: :ok        
     end
 
+    def show
+        product = Product.find_by(id: params[:id])
+        if product
+            render json: product, status: :ok
+        else
+            render json: {error: "Cannot find the product!"}, status: :unprocessable_entity
+        end
+    end
+    
+
     def create
         product = Product.new(products_params) 
         if product.save
