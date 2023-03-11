@@ -15,15 +15,15 @@ class ProductsController < ApplicationController
     
 
     def create
-        product = Product.new(products_params) 
+        product = Product.new(product_params) 
         if product.save
             render json: product, status: :created
         else
             render json: {error: "Cannot create new product!"}, status: :unprocessable_entity
         end       
     end
-
-    def delete
+    
+    def destroy
         product = Product.find_by(id: params[:id])
         product.destroy
         head :no_content
