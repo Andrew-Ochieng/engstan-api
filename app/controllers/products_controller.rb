@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
         end       
     end
     
-    def delete
+    def destroy
         product = Product.find_by(id: params[:id])
         product.destroy
         head :no_content
