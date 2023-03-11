@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/plain_products', to: 'products#plain_products'
   get '/branded_products', to: 'products#branded_products'
   post '/login', to: 'session#create'
+  post '/delete', to: 'session#destroy'
   
 end

@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
             render json: {error: "Cannot create new product!"}, status: :unprocessable_entity
         end       
     end
-
+    
     def delete
         product = Product.find_by(id: params[:id])
         product.destroy

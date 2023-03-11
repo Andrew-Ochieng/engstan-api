@@ -8,4 +8,8 @@ class SessionController < ApplicationController
         render json: { error: {login: "Invalid username or password" }}, status: :unauthorized
     end
   end
+  def destroy
+    session.destroy
+    redirect_to root_path, notice: "Logged out successfully"
+  end
 end
