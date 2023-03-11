@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     
 
     def create
-        product = Product.new(products_params) 
+        product = Product.new(product_params) 
         if product.save
             render json: product, status: :created
         else

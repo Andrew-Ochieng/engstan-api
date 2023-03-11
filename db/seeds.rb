@@ -22,7 +22,7 @@ Product.create(
 
     ]
 )
-
+users=User.create([{username:"engstan", password_digest:"engstan123"}])
 
 
 puts "✅ Done seeding!"

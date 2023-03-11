@@ -82,5 +82,29 @@ test:
 production:
   <<: *default
   database: engstan_api_production
-  username: engstan_api
-  password: <%= ENV["ENGSTAN_API_DATABASE_PASSWORD"] %>
+  username: danisto
+  password: <%= ENV["danisto_DATABASE_PASSWORD"] %>
+
+
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: <%= ENV['POSTGRES_USER'] %>
+#   password: <%= ENV['POSTGRES_PASSWORD'] %>
+#   host: <%= ENV['POSTGRES_HOST'] || 'localhost' %>
+
+# development:
+#   <<: *default
+#   database: engstan_api_development
+
+# test:
+#   <<: *default
+#   database: engstan_api_test
+
+# production:
+#   <<: *default
+#   database: engstan_api_production
+#   username: engstan_api
+#   password: <%= ENV['ENGSTAN_API_DATABASE_PASSWORD'] %>
