@@ -79,11 +79,11 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: engstan_api_production
-  username: danisto
-  password: <%= ENV["danisto_DATABASE_PASSWORD"] %>
+# production:
+#   <<: *default
+#   database: engstan_api_production
+#   username: danisto
+#   password: <%= ENV["danisto_DATABASE_PASSWORD"] %>
 
 
 
@@ -103,7 +103,8 @@ production:
 #   <<: *default
 #   database: engstan_api_test
 
-# production:
+production:
+url: <%= ENV["DATABASE_URL"] %>
 #   <<: *default
 #   database: engstan_api_production
 #   username: engstan_api
