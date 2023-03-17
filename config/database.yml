@@ -104,7 +104,6 @@ test:
 #   database: engstan_api_test
 
 production:
-  <<: *default
   url: <%= ENV["DATABASE_URL"] %>
 #   database: engstan_api_production
 #   username: engstan_api
